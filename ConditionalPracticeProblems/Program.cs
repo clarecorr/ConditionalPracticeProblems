@@ -145,21 +145,61 @@ namespace ConditionalPracticeProblems
             //Write a Console application that asks the user for 4 integers. 
             //Calculate the mean for these 4 numbers and display the result.
 
-            Console.WriteLine("Please enter 4 integers as prompted below");
-            Console.WriteLine("Enter your first integer");
-            double firstInt = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter your second integer");
-            double secondInt = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter your third integer");
-            double thirdInt = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter your fourth integer");
-            double fourthInt = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Please enter 4 integers as prompted below");
+            //Console.WriteLine("Enter your first integer");
+            //double firstInt = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter your second integer");
+            //double secondInt = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter your third integer");
+            //double thirdInt = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter your fourth integer");
+            //double fourthInt = double.Parse(Console.ReadLine());
 
-            double mean = (firstInt + secondInt + thirdInt + fourthInt) / 4;
+            //double mean = (firstInt + secondInt + thirdInt + fourthInt) / 4;
 
-            Console.WriteLine("The mean of these four numbers is " + mean);
+            //Console.WriteLine("The mean of these four numbers is " + mean);
 
             //I first made the 4 integers int type. This resulted in the mean being rounded down to the nearest integer even though I made mean a double. Why?
+
+            //FizzBuzz in class
+            Console.WriteLine("Enter two numbers between 1 and 9 as prompted below");
+            Console.WriteLine("Enter your first number");
+            int fizz = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter your second number");
+            int buzz = int.Parse(Console.ReadLine());
+            if (fizz < 1 || fizz > 9 || buzz < 1 || buzz > 9)
+            {
+                Console.WriteLine("You did not follow instructions");
+            }
+            else
+            {
+                Console.WriteLine(fizz + " is the Fizz number");
+
+                Console.WriteLine(buzz + " is the Buzz number");
+
+                Console.WriteLine("Enter a test number");
+                int test = int.Parse(Console.ReadLine());
+
+                double testFizz = test % fizz;
+                double testBuzz = test % buzz;
+
+                if (testFizz == 0 && testBuzz == 0)
+                {
+                    Console.WriteLine("FizzBuzz!");
+                }
+                else if (testFizz == 0 && testBuzz != 0)
+                {
+                    Console.WriteLine("Fizz!");
+                }
+                else if (testBuzz == 0 && testFizz != 0)
+                {
+                    Console.WriteLine("Buzz!");
+                }
+                else if (testFizz != 0 && testBuzz != 0)
+                {
+                    Console.WriteLine(test);
+                }
+            }
 
         }
     }
